@@ -19,7 +19,8 @@ Laravel環境構築
 ・Laravel 10.x  
 ・MySQL 8.0  
 ## ER図
-![ER図](./A_README_file_for_an_application_titled_お問い合わせフォー.png)
+## ER図
+![ER図](./A_digital_diagram_in_the_Japanese_language_illustr.png)
 ## URL
 ・開発環境:http://localhost/  
 ・phpMyAdmin:http://localhost:8080/  
