@@ -2,7 +2,7 @@
 
 ## 環境構築
 Docker ビルド  
-1. リポジトリをクローン  git clone <リポジトリURL>  
+1.リポジトリをクローン git clone <リポジトリURL>  
 2.docker-compose up -d --build  
 
 Laravel環境構築
