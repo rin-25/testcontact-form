@@ -2,10 +2,9 @@
 
 ## 環境構築
 Docker ビルド
- 1. リポジトリをクローン  
-　　git clone <リポジトリURL>
-   cd <プロジェクト名>
+ 1. リポジトリをクローン  git clone <リポジトリURL>
  2.docker-compose up -d --build
+
 Laravel環境構築
  1.docker-compose exec php bash
  2.composer install
