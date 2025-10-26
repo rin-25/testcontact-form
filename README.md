@@ -1,7 +1,8 @@
 # お問い合わせフォーム
 
 ## 環境構築
-Docker ビルド  
+Docker ビルド
+
 1.リポジトリをクローン git clone <リポジトリURL>  
 2.docker-compose up -d --build  
 
