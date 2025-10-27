@@ -1,0 +1,200 @@
+/* =========================
+   Common Font Style (Balanced)
+========================= */
+
+/* 全体のデフォルト（読みやすく） */
+body,
+label,
+p,
+a,
+button,
+input,
+select,
+textarea {
+    font-family: 'Helvetica Neue', 'Yu Gothic', 'Hiragino Kaku Gothic ProN', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    color: #7b5b46;
+}
+
+/* 見出し・大文字・強調部分（上品フォント） */
+h1,
+h2,
+h3,
+.title,
+.brand,
+.thankyou-text {
+    font-family: "Times New Roman", "Noto Serif JP", serif;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    color: #7b5b46;
+}
+
+/* プレースホルダー（薄茶） */
+::placeholder {
+    color: #c4b2a4;
+}
+
+/* =====================
+   Login / Register 共通
+===================== */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f3eee9;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+/* ヘッダー（白背景） */
+.auth-header {
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+    padding: 10px 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* ブランドロゴ */
+.brand {
+    font-family: "Times New Roman", "Noto Serif JP", serif;
+    font-weight: 300;
+    color: #7b5b46;
+    letter-spacing: 1px;
+    margin: 15px !important;
+    font-size: 35px !important;
+}
+
+/* 右上リンク */
+.switch-link {
+    font-family: "Times New Roman", "Noto Serif JP", serif;
+    position: absolute;
+    top: 30px;
+    right: 80px;
+    color: #c3b5a4;
+    font-size: 20px;
+    border: 1px solid #e2d8cf;
+    padding: 3px 10px;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+.switch-link:hover {
+    opacity: 0.8;
+}
+
+/* ベージュ背景部分 */
+.auth-body {
+    background-color: #f3eee9;
+    padding-top: 50px;
+    min-height: calc(100vh - 90px);
+}
+
+/* 見出し（Login / Register） */
+.auth-title {
+    font-family: "Times New Roman", "Noto Serif JP", serif;
+    font-weight: 400;
+    color: #7b5b46;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+/* フォーム全体 */
+.auth-form {
+    background-color: #fff;
+    width: 420px;
+    margin: 0 auto;
+    padding: 50px 55px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* 入力グループ */
+.form-group {
+    margin-bottom: 25px;
+}
+
+/* ラベルを上に表示 */
+.form-group label {
+    display: block;
+    color: #7b5b46;
+    margin-bottom: 6px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+/* 入力欄 */
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #f3f3f3;
+    color: #7b5b46;
+    border-radius: 3px;
+    font-size: 15px;
+}
+
+/* フォーカス時 */
+.form-group input:focus {
+    outline: 1px solid #c8b5a0;
+}
+
+/* エラーメッセージ */
+.error {
+    color: #e03e52;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* ボタン */
+.button-area {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.btn-auth {
+    background-color: #7b5b46;
+    color: #fff;
+    border: none;
+    padding: 10px 50px;
+    font-size: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn-auth:hover {
+    opacity: 0.85;
+}
+
+/* ---- Loginフォーム内ではラベルを必ず入力欄の上に置く ---- */
+.auth-form .form-group {
+    display: block !important;
+    margin-bottom: 26px;
+}
+
+.auth-form .form-group label,
+.auth-form label {
+    display: block !important;
+    /* ← 横並び指定を打ち消す */
+    float: none !important;
+    /* ← もし浮動配置されていれば解除 */
+    width: auto !important;
+    /* ← 固定幅を解除 */
+    text-align: left !important;
+    margin: 0 0 8px 0 !important;
+    /* ← 入力欄との間に余白 */
+    line-height: 1.6;
+}
+
+.auth-form .form-group input {
+    display: block !important;
+    width: 100% !important;
+}
+
+/* 万一、フォーム全体を横2列にしているグリッド/フレックス指定が残っていたら無効化 */
+.auth-form {
+    display: block !important;
+}
+

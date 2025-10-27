@@ -1,0 +1,477 @@
+/* ===============================
+   全体共通
+=============================== */
+body {
+    background-color: #fff;
+    font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+    color: #7b5b46;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2 {
+    font-weight: normal;
+    color: #7b5b46;
+    text-align: center;
+}
+
+h1.brand {
+    font-size: 26px;
+    margin-top: 40px;
+}
+
+h2.title {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+/* ===============================
+   タイトル下の横線
+=============================== */
+.contact-wrapper hr {
+    width: 100vw;
+    /* ← ビューポート全体の横幅まで伸ばす */
+    height: 1px;
+    background-color: #b8a898;
+    /* ← ブラウンの細線 */
+    border: none;
+    margin: 0 calc(-50vw + 50%);
+    /* ← コンテナ中央基準で端まで広げる */
+}
+
+/* ===============================
+   お問い合わせフォーム
+=============================== */
+.contact-wrapper {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto 80px auto;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    width: 22%;
+    font-size: 14px;
+    color: #7b5b46;
+    text-align: left;
+    padding-right: 10px;
+}
+
+.required {
+    color: #e17c6b;
+    margin-left: 3px;
+}
+
+/* 入力欄 */
+.input-box {
+    border: none;
+    background-color: #f5f3f1;
+    padding: 10px;
+    font-size: 14px;
+    color: #7b5b46;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input-box::placeholder {
+    color: #b8a898;
+}
+
+.input-box.full {
+    width: 100%;
+}
+
+/* 名前欄：左右2つ並べる */
+.name-fields {
+    display: flex;
+    gap: 12px;
+    width: 75%;
+}
+
+/* ===============================
+   性別ラジオボタンの横並び調整（最終版）
+================================ */
+.form-group:nth-of-type(2) {
+    align-items: flex-start !important;
+    /* ← 性別欄だけ中央寄せを解除 */
+}
+
+.gender-group {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin-left: 0 !important;
+    width: 75% !important;
+    /* 他の入力欄と横幅を揃える */
+}
+
+.gender-group label {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    gap: 2px;
+    font-size: 16px;
+    color: #6b5548;
+    writing-mode: horizontal-tb !important;
+    /* ← 横書きを強制 */
+    text-orientation: mixed !important;
+    white-space: nowrap !important;
+    /* 改行を防止 */
+}
+
+.gender-group input[type="radio"] {
+    margin: 0;
+}
+
+/* 電話番号欄 */
+.tel-fields {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 75%;
+}
+
+.tel-fields .input-box.tel {
+    width: 30%;
+    text-align: center;
+}
+
+.input-box::placeholder {
+    color: #b8a898;
+}
+
+/* 電話番号欄（3分割） */
+.tel-fields {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 75%;
+}
+
+.tel-fields .input-box.tel {
+    width: 30%;
+    text-align: center;
+}
+
+.tel-dash {
+    color: #7b5b46;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* セレクトボックス */
+select.input-box {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath fill='%237b5b46' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+    color: #b8a898;
+}
+
+select.input-box option:first-child {
+    color: #b8a898;
+}
+
+/* テキストエリア */
+.textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* ボタン */
+.button-area {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-confirm {
+    background-color: #7b5b46;
+    color: #fff;
+    border: none;
+    padding: 10px 50px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-confirm:hover {
+    opacity: 0.8;
+}
+
+.error-message {
+    color: #e17c6b;
+    font-size: 13px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    margin-left: 22%;
+    text-align: left;
+}
+
+/* ===============================
+   確認画面
+=============================== */
+
+.confirm-wrapper {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto 80px auto;
+    text-align: center;
+}
+
+.confirm-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.confirm-table th,
+.confirm-table td {
+    border: 1px solid #e6e0db;
+    padding: 15px;
+    font-size: 14px;
+    color: #7b5b46;
+    text-align: left;
+}
+
+.confirm-table th {
+    width: 25%;
+    background-color: #c3b3a2;
+    color: #fff;
+    font-weight: normal;
+}
+
+.confirm-table td {
+    width: 75%;
+    background-color: #fff;
+}
+
+/* ボタンエリア */
+.button-area {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-confirm {
+    background-color: #7b5b46;
+    color: #fff;
+    border: none;
+    padding: 10px 50px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 20px;
+}
+
+.btn-back {
+    background: none;
+    color: #7b5b46;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.btn-confirm:hover {
+    opacity: 0.8;
+}
+
+/* ===============================
+   確認画面：全幅の横線を強制的に伸ばす
+=============================== */
+hr.full-line {
+    width: 100vw;
+    height: 1px;
+    background-color: #b8a898;
+    border: none;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+}
+
+/* ===============================
+   入力フォーム全体の調整
+=============================== */
+.contact-wrapper {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding-bottom: 40px;
+}
+
+/* 各入力グループ */
+.form-group {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    width: 22%;
+    text-align: left;
+    font-size: 14px;
+    color: #7b5b46;
+    line-height: 40px;
+}
+
+/* ===============================
+   入力ボックスデザイン
+=============================== */
+.input-box {
+    background-color: #f7f7f7;
+    /* ← 薄いグレー */
+    border: 1px solid #ccc;
+    padding: 10px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #7b5b46;
+    box-sizing: border-box;
+}
+
+/* すべての入力欄を横幅統一 */
+.input-box.full,
+.name-fields .input-box,
+.tel-fields .input-box,
+select.input-box,
+textarea.input-box {
+    width: 100%;
+    max-width: 550px;
+    /* ← 過度に広くならない範囲で統一 */
+}
+
+/* お名前欄2つ並び */
+.name-fields {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    max-width: 550px;
+}
+
+/* 電話番号欄 */
+.tel-fields {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    max-width: 550px;
+}
+
+.tel-fields .input-box.tel {
+    flex: 1;
+}
+
+/* セレクトボックス */
+select.input-box {
+    appearance: none;
+    background-color: #f7f7f7;
+    background-image: linear-gradient(45deg, transparent 50%, #7b5b46 50%),
+        linear-gradient(135deg, #7b5b46 50%, transparent 50%);
+    background-position: calc(100% - 15px) center, calc(100% - 10px) center;
+    background-size: 6px 6px;
+    background-repeat: no-repeat;
+    padding-right: 30px;
+    color: #7b5b46;
+}
+
+/* テキストエリア */
+.textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* ===============================
+   エラーメッセージ
+=============================== */
+.error-message {
+    color: #e17c6b;
+    font-size: 13px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    margin-left: 22%;
+    text-align: left;
+}
+
+/* ===============================
+   ボタン
+=============================== */
+.btn-confirm {
+    background-color: #7b5b46;
+    color: #fff;
+    border: none;
+    padding: 15px 50px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-confirm:hover {
+    opacity: 0.8;
+}
+
+/* ===============================
+   サンクスページ
+=============================== */
+.thanks-wrapper {
+    position: relative;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.background-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16vw;
+    /* 中央に収まる */
+    color: #f5f1ed7c;
+    font-weight: 600;
+    z-index: 0;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.thanks-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.message {
+    color: #7b5b46;
+    font-size: 25px;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.home-button {
+    background-color: #7b5b46;
+    color: #fff;
+    padding: 8px 30px;
+    /* ボタンを少し小さく */
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: 0.2s;
+}
